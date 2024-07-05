@@ -3,33 +3,34 @@ import 'package:widgets_app/presentation/screens/animated/animated_screen.dart';
 import 'package:widgets_app/presentation/screens/app_tutorial/app_tutorial_screen.dart';
 import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
+import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/home/home_screen.dart';
 import 'package:widgets_app/presentation/screens/infinit_scroll/infinite_scroll_screen.dart';
 import 'package:widgets_app/presentation/screens/progress/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/snackbar/snackbar_screen.dart';
+import 'package:widgets_app/presentation/screens/theme_changer/theme_changer.dart';
 import 'package:widgets_app/presentation/screens/ui_controls/ui_controls_screen.dart';
 
 // GoRouter configuration
 final appRouter = GoRouter(
   routes: [
-
     GoRoute(
       path: '/',
       builder: (context, state) => const HomeScreen(),
     ),
-        GoRoute(
+    GoRoute(
       path: '/buttons',
       builder: (context, state) => const ButtonsScreen(),
     ),
-        GoRoute(
+    GoRoute(
       path: '/cards',
       builder: (context, state) => const CardsScreen(),
     ),
-            GoRoute(
+    GoRoute(
       path: '/progress',
       builder: (context, state) => const ProgressScreen(),
     ),
-                GoRoute(
+    GoRoute(
       path: '/snackbars',
       builder: (context, state) => const SnackbarScreen(),
     ),
@@ -37,17 +38,25 @@ final appRouter = GoRouter(
       path: '/animated',
       builder: (context, state) => const AnimatedScreen(),
     ),
-        GoRoute(
+    GoRoute(
       path: '/ui-controls',
       builder: (context, state) => const UiControlsScreen(),
     ),
-            GoRoute(
+    GoRoute(
       path: '/tutorial',
       builder: (context, state) => const AppTutorialScreen(),
     ),
-                GoRoute(
+    GoRoute(
       path: '/infinite',
       builder: (context, state) => const InfiniteScrollScreen(),
     ),
+    GoRoute(
+      path: '/counter_screen',
+      builder: (context, state) => const CounterScreen(),
+    ),
+    GoRoute(
+      path: '/theme_changer',
+      builder: (context, state) => const ThemeChangerScreen(),
+    ),
   ],
-);  
+);
